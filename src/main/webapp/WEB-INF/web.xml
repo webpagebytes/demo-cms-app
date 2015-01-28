@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>public</servlet-name>
+		<servlet-class>com.webpagebytes.cms.WPBPublicContentServlet</servlet-class>
+	</servlet>	
+	<servlet-mapping>
+		<servlet-name>public</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>admin</servlet-name>
+		<servlet-class>com.webpagebytes.cms.WPBAdminServlet</servlet-class>
+		<init-param>
+			<param-name>admin-uri-prefix</param-name>
+			<param-value>/demo/myadmin</param-value>
+		</init-param>		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin</servlet-name>
+		<url-pattern>/myadmin/*</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+        <listener-class>com.webpagebytes.cms.WPBCmsContextListener</listener-class>
+    </listener>	
+	<listener>
+        <listener-class>com.webpagebytes.wpbsample.WPBSampleContextListener</listener-class>
+    </listener>
+</web-app>
