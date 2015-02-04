@@ -3,7 +3,7 @@
   <groupId>com.webpagebytes.wpbsample</groupId>
   <artifactId>demo</artifactId>
   <packaging>war</packaging>
-  <version>1.1</version>
+  <version>1.2-SNAPSHOT</version>
   <description>Demo web application created with Webpagebytes CMS framework</description>
   <name>Demo Application Webpagebytes CMS</name>
   <url>http://www.webpagebytes.com</url>
@@ -25,7 +25,7 @@
     <connection>scm:git:ssh://git@github.com/webpagebytes/demo-cms-app.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/webpagebytes/demo-cms-app.git</developerConnection>
     <url>git@github.com/webpagebytes/demo-cms-app.git</url>
-    <tag>demo-1.1</tag>
+    <tag>HEAD</tag>
   </scm>
   <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
