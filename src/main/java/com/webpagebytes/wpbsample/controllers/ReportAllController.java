@@ -31,6 +31,7 @@ import org.apache.fop.apps.MimeConstants;
 import com.webpagebytes.cms.WPBContentProvider;
 import com.webpagebytes.cms.WPBForward;
 import com.webpagebytes.cms.WPBModel;
+import com.webpagebytes.cms.exception.WPBException;
 import com.webpagebytes.wpbsample.data.DepositWithdrawal;
 import com.webpagebytes.wpbsample.data.Session;
 import com.webpagebytes.wpbsample.data.Transaction;
@@ -44,7 +45,7 @@ public class ReportAllController extends GenericController {
 	}
 
 	public void handleRequest(HttpServletRequest request,
-			HttpServletResponse response, WPBModel model, WPBForward forward) {
+			HttpServletResponse response, WPBModel model, WPBForward forward) throws WPBException {
 		Session session = getSession(request, response);
 		if (false == handleAuthentication(request, response, model, forward, session))
 		{

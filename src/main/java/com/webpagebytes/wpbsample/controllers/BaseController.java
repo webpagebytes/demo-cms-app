@@ -46,7 +46,7 @@ public class BaseController implements WPBRequestHandler {
 	protected WPBDatabase database = WPBDatabaseService.getInstance();
 	protected WPBContentProvider contentProvider;
 	
-	protected Session getSession(HttpServletRequest request, HttpServletResponse response)
+	protected Session getSession(HttpServletRequest request, HttpServletResponse response) throws WPBException 
 	{
 		String sessionId = null;
 		Cookie[] cookies = request.getCookies();
@@ -83,7 +83,7 @@ public class BaseController implements WPBRequestHandler {
 			}
 		} catch (SQLException e)
 		{
-			
+			throw new WPBException("SQL Exception while get session", e);
 		}
 		return session;
 	}
