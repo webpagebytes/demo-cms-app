@@ -86,6 +86,16 @@ public class WPBDatabase {
 	    dataSource.setUrl(dbProps.get(WPBDatabaseService.DB_PROPS_CONNECTION_URL));
 	    dataSource.setUsername(dbProps.get(WPBDatabaseService.DB_PROPS_USER_NAME));
 	    dataSource.setPassword(dbProps.get(WPBDatabaseService.DB_PROPS_PASSWORD));
+	    String testOnBorrow = dbProps.get(WPBDatabaseService.DB_PROPS_TEST_ON_BORROW);
+	    if (testOnBorrow != null && testOnBorrow.trim().equals("true"))
+	    {
+	        dataSource.setTestOnBorrow(true);	        
+	    }
+	    String validationQuery = dbProps.get(WPBDatabaseService.DB_PROPS_VALIDATION_QUERY);
+	    if (validationQuery != null)
+	    {
+	        dataSource.setValidationQuery(validationQuery);
+	    }
 	}
 	
 	private Connection getConnection() throws SQLException

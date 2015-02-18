@@ -30,6 +30,9 @@ public class WPBDatabaseService {
 	public static final String DB_PROPS_DRIVER_CLASS = "db_driverClass";
 	public static final String DB_PROPS_USER_NAME = "db_userName";
 	public static final String DB_PROPS_PASSWORD = "db_password";
+	public static final String DB_PROPS_TEST_ON_BORROW = "db_testOnBorrow";
+	public static final String DB_PROPS_VALIDATION_QUERY = "db_validationQuery";
+    
 	
 	private static WPBDatabase database;
 	private static final Object lock = new Object(); 
@@ -46,6 +49,8 @@ public class WPBDatabaseService {
 					dbProps.put(DB_PROPS_CONNECTION_URL, configurator.getConfig(DB_PROPS_CONNECTION_URL));
 					dbProps.put(DB_PROPS_USER_NAME, configurator.getConfig(DB_PROPS_USER_NAME));
 					dbProps.put(DB_PROPS_PASSWORD, configurator.getConfig(DB_PROPS_PASSWORD));					
+					dbProps.put(DB_PROPS_TEST_ON_BORROW, configurator.getConfig(DB_PROPS_TEST_ON_BORROW));
+					dbProps.put(DB_PROPS_VALIDATION_QUERY, configurator.getConfig(DB_PROPS_VALIDATION_QUERY));
 					log.log(Level.INFO, " opening DB for " + configurator.getConfig(DB_PROPS_CONNECTION_URL));
 					database = new WPBDatabase(dbProps);
 				}
