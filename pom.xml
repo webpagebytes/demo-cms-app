@@ -34,7 +34,12 @@
     <dependency>
         <groupId>com.webpagebytes.cms</groupId>
         <artifactId>webpagebytes-cms</artifactId>
-        <version>1.2-SNAPSHOT</version>
+        <version>1.2</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.webpagebytes.plugins</groupId>
+  		<artifactId>wpb-general-plugins</artifactId>
+  		<version>1.0</version>
     </dependency>
     <dependency>
         <groupId>javax.servlet</groupId>
