@@ -26,9 +26,39 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/myadmin/*</url-pattern>
 	</servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>com.webpagebytes.plugins.WPBLocalAuthLoginPage</servlet-class>
+    </servlet>  
+    <servlet-mapping>
+    <servlet-name>login</servlet-name>
+        <url-pattern>/myadmin/login</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>com.webpagebytes.plugins.WPBLocalAuthLogout</servlet-class>
+    </servlet>  
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/myadmin/logout</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>profile</servlet-name>
+        <servlet-class>com.webpagebytes.plugins.WPBLocalAuthProfilePage</servlet-class>
+    </servlet>  
+    <servlet-mapping>
+    <servlet-name>profile</servlet-name>
+        <url-pattern>/myadmin/profile</url-pattern>
+    </servlet-mapping>
+
+
 	<listener>
         <listener-class>com.webpagebytes.cms.WPBCmsContextListener</listener-class>
     </listener>	
+    <listener>
+        <listener-class>com.webpagebytes.plugins.WPBAuthLocalListener</listener-class>
+    </listener>     
 	<listener>
         <listener-class>com.webpagebytes.wpbsample.WPBSampleContextListener</listener-class>
     </listener>
