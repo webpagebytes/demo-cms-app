@@ -3,7 +3,7 @@
   <groupId>com.webpagebytes.wpbsample</groupId>
   <artifactId>demo</artifactId>
   <packaging>war</packaging>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.3-SNAPSHOT</version>
   <description>Demo web application created with Webpagebytes CMS framework</description>
   <name>Demo Application Webpagebytes CMS</name>
   <url>http://www.webpagebytes.com</url>
